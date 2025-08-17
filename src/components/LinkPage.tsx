@@ -32,6 +32,7 @@ export default function LinkPage() {
     return (
         <Stack spacing={2} sx={{ maxWidth: 400, margin: 'auto', mt: 5 }}>
             <Typography variant="h4" align="center">Lenkeside</Typography>
+            {links.length === 0 && <Typography variant="body1" align="center">Laster...</Typography>}
             {links.map(({ Linknavn, 'Faktisk link': url }) => (
                 <Button
                     key={Linknavn}
